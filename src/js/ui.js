@@ -14,8 +14,8 @@ var ui = function() {
                 connect: true,
                 
                 range: {
-                    min: 3,
-                    max: 7
+                    min: 1,
+                    max: 10
                 }
             });
 
@@ -351,7 +351,8 @@ var ui = function() {
                 });
 
                 var width = $panel.closest('.container').width(),
-                    height = width * 0.5;
+                    //height = width * 0.5;
+				height = $panel.closest('.container').height();
 
                 var force = d3.layout.force()
                     .nodes(d3.values(nodes))
